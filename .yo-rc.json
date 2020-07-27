@@ -1,14 +1,14 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "testdata",
-      "nativeLanguage": "fr"
+      "packageName": "testpackage",
+      "nativeLanguage": "en"
     },
     "jhipsterVersion": "6.10.1",
     "applicationType": "monolith",
     "baseName": "Test",
-    "packageName": "testdata",
-    "packageFolder": "testdata",
+    "packageName": "testpackage",
+    "packageFolder": "testpackage",
     "serverPort": "8080",
     "authenticationType": "jwt",
     "cacheProvider": "ehcache",
@@ -19,23 +19,23 @@
     "prodDatabaseType": "mongodb",
     "searchEngine": false,
     "messageBroker": false,
-    "serviceDiscoveryType": "eureka",
+    "serviceDiscoveryType": false,
     "buildTool": "maven",
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "ZDRiZGU3MjZjYThmNWQ0ZDU0MGYzNmRmOWYyODAyYTVjOGQxZWU5YzdkMDdhODJhNzA5MDM5NzNlY2FiNjk5MTQyZDdmNGNiMjk3ODFmM2M5ZjhiYjhiM2NhZWUwYzZlYzQzODQyM2ZkYjIwYWQ3MGUwYzg1MDMxOTVkNzdjMDk=",
+    "jwtSecretKey": "NmRkMTQyOGUyMjI1MGRhMWY5MmM2NDU1MTRiM2IxYzc4NTdjY2NkYzFkYmYwODA0Mjg2NjNjYmJmNTllNTYxOTljODA4YWRjOTZiNjhkMzE0NjEzYzZhZmY5YWUzYWFlNDE2YTI5ZjgwNzJjOTQ0OTQyZDcxYTE5YTNhMzRjMjU=",
     "embeddableLaunchScript": false,
     "useSass": true,
     "clientPackageManager": "npm",
     "skipClient": true,
-    "creationTimestamp": 1595580100169,
-    "testFrameworks": ["gatling"],
+    "creationTimestamp": 1595859779921,
+    "testFrameworks": [],
     "jhiPrefix": "jhi",
     "entitySuffix": "",
     "dtoSuffix": "DTO",
     "otherModules": [],
     "enableTranslation": true,
-    "nativeLanguage": "fr",
-    "languages": ["fr"],
+    "nativeLanguage": "en",
+    "languages": ["en"],
     "blueprints": []
   }
 }

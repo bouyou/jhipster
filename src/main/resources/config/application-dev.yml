@@ -17,15 +17,7 @@ logging:
   level:
     ROOT: DEBUG
     io.github.jhipster: DEBUG
-    testdata: DEBUG
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    enabled: false # By default, the JHipster Registry is not used in the "dev" profile
-    service-url:
-      defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
+    testpackage: DEBUG
 
 spring:
   profiles:
@@ -47,7 +39,6 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017
       database: Test
-      auto-index-creation: false
   mail:
     host: localhost
     port: 25
@@ -57,15 +48,6 @@ spring:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:
     cache: false
-  sleuth:
-    sampler:
-      probability: 1 # report 100% of traces
-  zipkin: # Use the "zipkin" Maven profile to have the Spring Cloud Zipkin dependencies
-    base-url: http://localhost:9411
-    enabled: false
-    locator:
-      discovery:
-        enabled: true
 
 server:
   port: 8080
@@ -93,7 +75,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-        base64-secret: ZDRiZGU3MjZjYThmNWQ0ZDU0MGYzNmRmOWYyODAyYTVjOGQxZWU5YzdkMDdhODJhNzA5MDM5NzNlY2FiNjk5MTQyZDdmNGNiMjk3ODFmM2M5ZjhiYjhiM2NhZWUwYzZlYzQzODQyM2ZkYjIwYWQ3MGUwYzg1MDMxOTVkNzdjMDk=
+        base64-secret: NmRkMTQyOGUyMjI1MGRhMWY5MmM2NDU1MTRiM2IxYzc4NTdjY2NkYzFkYmYwODA0Mjg2NjNjYmJmNTllNTYxOTljODA4YWRjOTZiNjhkMzE0NjEzYzZhZmY5YWUzYWFlNDE2YTI5ZjgwNzJjOTQ0OTQyZDcxYTE5YTNhMzRjMjU=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000
