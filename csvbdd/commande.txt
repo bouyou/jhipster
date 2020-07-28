@@ -1,0 +1,1 @@
+mongoimport --type csv -d jhipsterSampleApplication -c bornes --headerline --drop products.csv
