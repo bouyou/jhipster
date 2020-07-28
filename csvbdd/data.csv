@@ -1,4 +1,4 @@
-X;Y;n_amenageur;n_operateur;n_enseigne;id_station;n_station;ad_station;code_insee;Xlongitude;Ylatitude;nbre_pdc;id_pdc;puiss_max;type_prise;acces_recharge;accessibilité;observations;date_maj
+X;Y;amenageur;operateur;enseigne;idstation;station;adstation;codeinsee;Xlongitude;Ylatitude;nbrepdc;idpdc;puissmax;typeprise;accesrecharge;accessibilité;observations;date_maj
 2.605599;49.0055348996909;Aéroports de Paris SA;Sodetrel;Paris Aéroports;FR*SOD*P*GADP*5*_*_*_;;;77294;2.605599;49.005534899691;2;;;"type2,typee";Gratuit;24/7;node/7303929542;2020/03/17
 2.605668;49.005528799691;Aéroports de Paris SA;Sodetrel;Paris Aéroports;FR*SOD*P*GADP*5*_*_*_;;;77294;2.605668;49.005528799691;2;;;"type2,typee";Gratuit;24/7;node/7303929541;2020/03/17
 2.6057369;49.005522799691;Aéroports de Paris SA;Sodetrel;Paris Aéroports;FR*SOD*P*GADP*5*_*_*_;;;77294;2.6057369;49.005522799691;2;;;"type2,typee";Gratuit;24/7;node/7303929540;2020/03/17

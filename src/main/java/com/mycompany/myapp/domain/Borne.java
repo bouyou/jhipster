@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
  * The Borne entity.
  */
 @ApiModel(description = "The Borne entity.")
-@Document(collection = "borne")
+@Document(collection = "Borne")
 public class Borne implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -19,10 +19,10 @@ public class Borne implements Serializable {
     private String id;
 
     @Field("x")
-    private Float x;
+    private Double x;
 
     @Field("y")
-    private Float y;
+    private Double y;
 
     @Field("amenageur")
     private String amenageur;
@@ -31,25 +31,25 @@ public class Borne implements Serializable {
     private String operateur;
 
     @Field("nenseigne")
-    private String nenseigne;
+    private String enseigne;
 
     @Field("idstation")
-    private Integer idstation;
+    private String idstation;
 
     @Field("nstation")
-    private String nstation;
+    private String station;
 
     @Field("adstation")
     private String adstation;
 
     @Field("codeinsee")
-    private String codeinsee;
+    private Integer codeinsee;
 
     @Field("xlongitude")
-    private Float xlongitude;
+    private Double xlongitude;
 
     @Field("ylatitude")
-    private Float ylatitude;
+    private Double ylatitude;
 
     @Field("nbrepdc")
     private Integer nbrepdc;
@@ -58,7 +58,7 @@ public class Borne implements Serializable {
     private Integer idpdc;
 
     @Field("puissmax")
-    private Float puissmax;
+    private String puissmax;
 
     @Field("typeprise")
     private String typeprise;
@@ -84,29 +84,29 @@ public class Borne implements Serializable {
         this.id = id;
     }
 
-    public Float getX() {
+    public Double getX() {
         return x;
     }
 
-    public Borne x(Float x) {
+    public Borne x(Double x) {
         this.x = x;
         return this;
     }
 
-    public void setX(Float x) {
+    public void setX(Double x) {
         this.x = x;
     }
 
-    public Float getY() {
+    public Double getY() {
         return y;
     }
 
-    public Borne y(Float y) {
+    public Borne y(Double y) {
         this.y = y;
         return this;
     }
 
-    public void setY(Float y) {
+    public void setY(Double y) {
         this.y = y;
     }
 
@@ -137,42 +137,42 @@ public class Borne implements Serializable {
     }
 
     public String getNenseigne() {
-        return nenseigne;
+        return enseigne;
     }
 
-    public Borne nenseigne(String nenseigne) {
-        this.nenseigne = nenseigne;
+    public Borne nenseigne(String enseigne) {
+        this.enseigne = enseigne;
         return this;
     }
 
-    public void setNenseigne(String nenseigne) {
-        this.nenseigne = nenseigne;
+    public void setNenseigne(String enseigne) {
+        this.enseigne = enseigne;
     }
 
-    public Integer getIdstation() {
+    public String getIdstation() {
         return idstation;
     }
 
-    public Borne idstation(Integer idstation) {
+    public Borne idstation(String idstation) {
         this.idstation = idstation;
         return this;
     }
 
-    public void setIdstation(Integer idstation) {
+    public void setIdstation(String idstation) {
         this.idstation = idstation;
     }
 
     public String getNstation() {
-        return nstation;
+        return station;
     }
 
     public Borne nstation(String nstation) {
-        this.nstation = nstation;
+        this.station = nstation;
         return this;
     }
 
     public void setNstation(String nstation) {
-        this.nstation = nstation;
+        this.station = nstation;
     }
 
     public String getAdstation() {
@@ -188,42 +188,42 @@ public class Borne implements Serializable {
         this.adstation = adstation;
     }
 
-    public String getCodeinsee() {
+    public Integer getCodeinsee() {
         return codeinsee;
     }
 
-    public Borne codeinsee(String codeinsee) {
+    public Borne codeinsee(Integer codeinsee) {
         this.codeinsee = codeinsee;
         return this;
     }
 
-    public void setCodeinsee(String codeinsee) {
+    public void setCodeinsee(Integer codeinsee) {
         this.codeinsee = codeinsee;
     }
 
-    public Float getXlongitude() {
+    public Double getXlongitude() {
         return xlongitude;
     }
 
-    public Borne xlongitude(Float xlongitude) {
+    public Borne xlongitude(Double xlongitude) {
         this.xlongitude = xlongitude;
         return this;
     }
 
-    public void setXlongitude(Float xlongitude) {
+    public void setXlongitude(Double xlongitude) {
         this.xlongitude = xlongitude;
     }
 
-    public Float getYlatitude() {
+    public Double getYlatitude() {
         return ylatitude;
     }
 
-    public Borne ylatitude(Float ylatitude) {
+    public Borne ylatitude(Double ylatitude) {
         this.ylatitude = ylatitude;
         return this;
     }
 
-    public void setYlatitude(Float ylatitude) {
+    public void setYlatitude(Double ylatitude) {
         this.ylatitude = ylatitude;
     }
 
@@ -253,16 +253,16 @@ public class Borne implements Serializable {
         this.idpdc = idpdc;
     }
 
-    public Float getPuissmax() {
+    public String getPuissmax() {
         return puissmax;
     }
 
-    public Borne puissmax(Float puissmax) {
+    public Borne puissmax(String puissmax) {
         this.puissmax = puissmax;
         return this;
     }
 
-    public void setPuissmax(Float puissmax) {
+    public void setPuissmax(String puissmax) {
         this.puissmax = puissmax;
     }
 

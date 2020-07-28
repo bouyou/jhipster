@@ -81,7 +81,7 @@
   "relationships": [],
   "changelogDate": "20200728091536",
   "javadoc": "The Borne entity.",
-  "entityTableName": "borne",
+  "entityTableName": "Borne",
   "dto": "no",
   "pagination": "no",
   "service": "no",
