@@ -1,83 +1,6 @@
 {
   "name": "Borne",
-  "fields": [
-    {
-      "fieldName": "x",
-      "fieldType": "Float"
-    },
-    {
-      "fieldName": "y",
-      "fieldType": "Float"
-    },
-    {
-      "fieldName": "amenageur",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "operateur",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "nenseigne",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "idstation",
-      "fieldType": "Integer"
-    },
-    {
-      "fieldName": "nstation",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "adstation",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "codeinsee",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "xlongitude",
-      "fieldType": "Float"
-    },
-    {
-      "fieldName": "ylatitude",
-      "fieldType": "Float"
-    },
-    {
-      "fieldName": "nbrepdc",
-      "fieldType": "Integer"
-    },
-    {
-      "fieldName": "idpdc",
-      "fieldType": "Integer"
-    },
-    {
-      "fieldName": "puissmax",
-      "fieldType": "Float"
-    },
-    {
-      "fieldName": "typeprise",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "accesrecharge",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "accessibilite",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "observations",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "datemajnoperateur",
-      "fieldType": "Instant"
-    }
-  ],
+  "fields": [],
   "relationships": [],
   "changelogDate": "20200728091536",
   "javadoc": "The Borne entity.",
@@ -90,5 +13,7 @@
   "readOnly": false,
   "embedded": false,
   "clientRootFolder": "",
-  "applications": "*"
+  "applications": "*",
+  "searchEngine": false,
+  "databaseType": "mongodb"
 }

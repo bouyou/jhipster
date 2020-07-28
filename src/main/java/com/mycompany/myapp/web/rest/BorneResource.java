@@ -85,9 +85,6 @@ public class BorneResource {
     @GetMapping("/bornes")
     public List<Borne> getAllBornes() {
         log.debug("REST request to get all Bornes");
-
-        List<Borne> toto = borneRepository.findAll();
-
         return borneRepository.findAll();
     }
 

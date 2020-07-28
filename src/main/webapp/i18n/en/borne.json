@@ -15,26 +15,7 @@
       },
       "detail": {
         "title": "Borne"
-      },
-      "x": "X",
-      "y": "Y",
-      "amenageur": "Amenageur",
-      "operateur": "Operateur",
-      "nenseigne": "Nenseigne",
-      "idstation": "Idstation",
-      "nstation": "Nstation",
-      "adstation": "Adstation",
-      "codeinsee": "Codeinsee",
-      "xlongitude": "Xlongitude",
-      "ylatitude": "Ylatitude",
-      "nbrepdc": "Nbrepdc",
-      "idpdc": "Idpdc",
-      "puissmax": "Puissmax",
-      "typeprise": "Typeprise",
-      "accesrecharge": "Accesrecharge",
-      "accessibilite": "Accessibilite",
-      "observations": "Observations",
-      "datemajnoperateur": "Datemajnoperateur"
+      }
     }
   }
 }
