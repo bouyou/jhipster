@@ -1,0 +1,28 @@
+
+/**
+ * The Borne entity.
+ */
+entity Borne {
+	id String,
+	x Float,
+	y Float,
+	amenageur String,
+    operateur String,
+    nenseigne String,
+    idstation Integer,
+    nstation String,
+    adstation String,
+    codeinsee String
+    xlongitude Float,
+    ylatitude Float,
+    nbrepdc Integer,
+    idpdc Integer,
+    puissmax Float,
+    typeprise String, 
+    accesrecharge String,
+    accessibilite String,
+    observations String,
+	datemajnoperateur Instant,
+}
+
+

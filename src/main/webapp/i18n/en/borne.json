@@ -1,0 +1,40 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "borne": {
+      "home": {
+        "title": "Bornes",
+        "createLabel": "Create a new Borne",
+        "createOrEditLabel": "Create or edit a Borne",
+        "notFound": "No Bornes found"
+      },
+      "created": "A new Borne is created with identifier {{ param }}",
+      "updated": "A Borne is updated with identifier {{ param }}",
+      "deleted": "A Borne is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Borne {{ id }}?"
+      },
+      "detail": {
+        "title": "Borne"
+      },
+      "x": "X",
+      "y": "Y",
+      "amenageur": "Amenageur",
+      "operateur": "Operateur",
+      "nenseigne": "Nenseigne",
+      "idstation": "Idstation",
+      "nstation": "Nstation",
+      "adstation": "Adstation",
+      "codeinsee": "Codeinsee",
+      "xlongitude": "Xlongitude",
+      "ylatitude": "Ylatitude",
+      "nbrepdc": "Nbrepdc",
+      "idpdc": "Idpdc",
+      "puissmax": "Puissmax",
+      "typeprise": "Typeprise",
+      "accesrecharge": "Accesrecharge",
+      "accessibilite": "Accessibilite",
+      "observations": "Observations",
+      "datemajnoperateur": "Datemajnoperateur"
+    }
+  }
+}
