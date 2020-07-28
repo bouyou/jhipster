@@ -1,1 +1,4 @@
-mongoimport --type csv -d jhipsterSampleApplication -c bornes --headerline --drop products.csv
+Dans un prompt command windows
+
+
+mongoimport --db jhipsterSampleApplication --collection Borne --type csv --headerline --ignoreBlanks --file C:\jhipster\csvbdd\data.csv

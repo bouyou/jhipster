@@ -1,0 +1,19 @@
+{
+  "name": "Employee",
+  "fields": [],
+  "relationships": [],
+  "changelogDate": "20200728090354",
+  "javadoc": "The Borne entity.",
+  "entityTableName": "employee",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*",
+  "searchEngine": false,
+  "databaseType": "mongodb"
+}
