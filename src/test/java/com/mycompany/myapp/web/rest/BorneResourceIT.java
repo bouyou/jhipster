@@ -27,11 +27,11 @@ import org.springframework.test.web.servlet.MockMvc;
 @AutoConfigureMockMvc
 @WithMockUser
 public class BorneResourceIT {
-    private static final Double DEFAULT_X = 1F;
-    private static final Float UPDATED_X = 2F;
+    private static final Double DEFAULT_X = 1D;
+    private static final Double UPDATED_X = 2D;
 
-    private static final Float DEFAULT_Y = 1F;
-    private static final Float UPDATED_Y = 2F;
+    private static final Double DEFAULT_Y = 1D;
+    private static final Double UPDATED_Y = 2D;
 
     private static final String DEFAULT_AMENAGEUR = "AAAAAAAAAA";
     private static final String UPDATED_AMENAGEUR = "BBBBBBBBBB";
@@ -39,35 +39,35 @@ public class BorneResourceIT {
     private static final String DEFAULT_OPERATEUR = "AAAAAAAAAA";
     private static final String UPDATED_OPERATEUR = "BBBBBBBBBB";
 
-    private static final String DEFAULT_NENSEIGNE = "AAAAAAAAAA";
-    private static final String UPDATED_NENSEIGNE = "BBBBBBBBBB";
+    private static final String DEFAULT_ENSEIGNE = "AAAAAAAAAA";
+    private static final String UPDATED_ENSEIGNE = "BBBBBBBBBB";
 
-    private static final Integer DEFAULT_IDSTATION = 1;
-    private static final Integer UPDATED_IDSTATION = 2;
+    private static final String DEFAULT_IDSTATION = "AAAAAAAAAA";
+    private static final String UPDATED_IDSTATION = "BBBBBBBBBB";
 
-    private static final String DEFAULT_NSTATION = "AAAAAAAAAA";
-    private static final String UPDATED_NSTATION = "BBBBBBBBBB";
+    private static final String DEFAULT_STATION = "AAAAAAAAAA";
+    private static final String UPDATED_STATION = "BBBBBBBBBB";
 
     private static final String DEFAULT_ADSTATION = "AAAAAAAAAA";
     private static final String UPDATED_ADSTATION = "BBBBBBBBBB";
 
-    private static final String DEFAULT_CODEINSEE = "AAAAAAAAAA";
-    private static final String UPDATED_CODEINSEE = "BBBBBBBBBB";
+    private static final Integer DEFAULT_CODEINSEE = 1;
+    private static final Integer UPDATED_CODEINSEE = 2;
 
-    private static final Float DEFAULT_XLONGITUDE = 1F;
-    private static final Float UPDATED_XLONGITUDE = 2F;
+    private static final Double DEFAULT_XLONGITUDE = 1D;
+    private static final Double UPDATED_XLONGITUDE = 2D;
 
-    private static final Float DEFAULT_YLATITUDE = 1F;
-    private static final Float UPDATED_YLATITUDE = 2F;
+    private static final Double DEFAULT_YLATITUDE = 1D;
+    private static final Double UPDATED_YLATITUDE = 2D;
 
-    private static final Integer DEFAULT_NBREPDC = 1;
-    private static final Integer UPDATED_NBREPDC = 2;
+    private static final String DEFAULT_NBREPDC = "AAAAAAAAAA";
+    private static final String UPDATED_NBREPDC = "BBBBBBBBBB";
 
-    private static final Integer DEFAULT_IDPDC = 1;
-    private static final Integer UPDATED_IDPDC = 2;
+    private static final String DEFAULT_IDPDC = "AAAAAAAAAA";
+    private static final String UPDATED_IDPDC = "BBBBBBBBBB";
 
-    private static final Float DEFAULT_PUISSMAX = 1F;
-    private static final Float UPDATED_PUISSMAX = 2F;
+    private static final String DEFAULT_PUISSMAX = "AAAAAAAAAA";
+    private static final String UPDATED_PUISSMAX = "BBBBBBBBBB";
 
     private static final String DEFAULT_TYPEPRISE = "AAAAAAAAAA";
     private static final String UPDATED_TYPEPRISE = "BBBBBBBBBB";
@@ -104,9 +104,9 @@ public class BorneResourceIT {
             .y(DEFAULT_Y)
             .amenageur(DEFAULT_AMENAGEUR)
             .operateur(DEFAULT_OPERATEUR)
-            .nenseigne(DEFAULT_NENSEIGNE)
+            .enseigne(DEFAULT_ENSEIGNE)
             .idstation(DEFAULT_IDSTATION)
-            .nstation(DEFAULT_NSTATION)
+            .station(DEFAULT_STATION)
             .adstation(DEFAULT_ADSTATION)
             .codeinsee(DEFAULT_CODEINSEE)
             .xlongitude(DEFAULT_XLONGITUDE)
@@ -134,9 +134,9 @@ public class BorneResourceIT {
             .y(UPDATED_Y)
             .amenageur(UPDATED_AMENAGEUR)
             .operateur(UPDATED_OPERATEUR)
-            .nenseigne(UPDATED_NENSEIGNE)
+            .enseigne(UPDATED_ENSEIGNE)
             .idstation(UPDATED_IDSTATION)
-            .nstation(UPDATED_NSTATION)
+            .station(UPDATED_STATION)
             .adstation(UPDATED_ADSTATION)
             .codeinsee(UPDATED_CODEINSEE)
             .xlongitude(UPDATED_XLONGITUDE)
@@ -174,9 +174,9 @@ public class BorneResourceIT {
         assertThat(testBorne.getY()).isEqualTo(DEFAULT_Y);
         assertThat(testBorne.getAmenageur()).isEqualTo(DEFAULT_AMENAGEUR);
         assertThat(testBorne.getOperateur()).isEqualTo(DEFAULT_OPERATEUR);
-        assertThat(testBorne.getNenseigne()).isEqualTo(DEFAULT_NENSEIGNE);
+        assertThat(testBorne.getEnseigne()).isEqualTo(DEFAULT_ENSEIGNE);
         assertThat(testBorne.getIdstation()).isEqualTo(DEFAULT_IDSTATION);
-        assertThat(testBorne.getNstation()).isEqualTo(DEFAULT_NSTATION);
+        assertThat(testBorne.getStation()).isEqualTo(DEFAULT_STATION);
         assertThat(testBorne.getAdstation()).isEqualTo(DEFAULT_ADSTATION);
         assertThat(testBorne.getCodeinsee()).isEqualTo(DEFAULT_CODEINSEE);
         assertThat(testBorne.getXlongitude()).isEqualTo(DEFAULT_XLONGITUDE);
@@ -223,16 +223,16 @@ public class BorneResourceIT {
             .andExpect(jsonPath("$.[*].y").value(hasItem(DEFAULT_Y.doubleValue())))
             .andExpect(jsonPath("$.[*].amenageur").value(hasItem(DEFAULT_AMENAGEUR)))
             .andExpect(jsonPath("$.[*].operateur").value(hasItem(DEFAULT_OPERATEUR)))
-            .andExpect(jsonPath("$.[*].nenseigne").value(hasItem(DEFAULT_NENSEIGNE)))
+            .andExpect(jsonPath("$.[*].enseigne").value(hasItem(DEFAULT_ENSEIGNE)))
             .andExpect(jsonPath("$.[*].idstation").value(hasItem(DEFAULT_IDSTATION)))
-            .andExpect(jsonPath("$.[*].nstation").value(hasItem(DEFAULT_NSTATION)))
+            .andExpect(jsonPath("$.[*].station").value(hasItem(DEFAULT_STATION)))
             .andExpect(jsonPath("$.[*].adstation").value(hasItem(DEFAULT_ADSTATION)))
             .andExpect(jsonPath("$.[*].codeinsee").value(hasItem(DEFAULT_CODEINSEE)))
             .andExpect(jsonPath("$.[*].xlongitude").value(hasItem(DEFAULT_XLONGITUDE.doubleValue())))
             .andExpect(jsonPath("$.[*].ylatitude").value(hasItem(DEFAULT_YLATITUDE.doubleValue())))
             .andExpect(jsonPath("$.[*].nbrepdc").value(hasItem(DEFAULT_NBREPDC)))
             .andExpect(jsonPath("$.[*].idpdc").value(hasItem(DEFAULT_IDPDC)))
-            .andExpect(jsonPath("$.[*].puissmax").value(hasItem(DEFAULT_PUISSMAX.doubleValue())))
+            .andExpect(jsonPath("$.[*].puissmax").value(hasItem(DEFAULT_PUISSMAX)))
             .andExpect(jsonPath("$.[*].typeprise").value(hasItem(DEFAULT_TYPEPRISE)))
             .andExpect(jsonPath("$.[*].accesrecharge").value(hasItem(DEFAULT_ACCESRECHARGE)))
             .andExpect(jsonPath("$.[*].accessibilite").value(hasItem(DEFAULT_ACCESSIBILITE)))
@@ -255,16 +255,16 @@ public class BorneResourceIT {
             .andExpect(jsonPath("$.y").value(DEFAULT_Y.doubleValue()))
             .andExpect(jsonPath("$.amenageur").value(DEFAULT_AMENAGEUR))
             .andExpect(jsonPath("$.operateur").value(DEFAULT_OPERATEUR))
-            .andExpect(jsonPath("$.nenseigne").value(DEFAULT_NENSEIGNE))
+            .andExpect(jsonPath("$.enseigne").value(DEFAULT_ENSEIGNE))
             .andExpect(jsonPath("$.idstation").value(DEFAULT_IDSTATION))
-            .andExpect(jsonPath("$.nstation").value(DEFAULT_NSTATION))
+            .andExpect(jsonPath("$.station").value(DEFAULT_STATION))
             .andExpect(jsonPath("$.adstation").value(DEFAULT_ADSTATION))
             .andExpect(jsonPath("$.codeinsee").value(DEFAULT_CODEINSEE))
             .andExpect(jsonPath("$.xlongitude").value(DEFAULT_XLONGITUDE.doubleValue()))
             .andExpect(jsonPath("$.ylatitude").value(DEFAULT_YLATITUDE.doubleValue()))
             .andExpect(jsonPath("$.nbrepdc").value(DEFAULT_NBREPDC))
             .andExpect(jsonPath("$.idpdc").value(DEFAULT_IDPDC))
-            .andExpect(jsonPath("$.puissmax").value(DEFAULT_PUISSMAX.doubleValue()))
+            .andExpect(jsonPath("$.puissmax").value(DEFAULT_PUISSMAX))
             .andExpect(jsonPath("$.typeprise").value(DEFAULT_TYPEPRISE))
             .andExpect(jsonPath("$.accesrecharge").value(DEFAULT_ACCESRECHARGE))
             .andExpect(jsonPath("$.accessibilite").value(DEFAULT_ACCESSIBILITE))
@@ -292,9 +292,9 @@ public class BorneResourceIT {
             .y(UPDATED_Y)
             .amenageur(UPDATED_AMENAGEUR)
             .operateur(UPDATED_OPERATEUR)
-            .nenseigne(UPDATED_NENSEIGNE)
+            .enseigne(UPDATED_ENSEIGNE)
             .idstation(UPDATED_IDSTATION)
-            .nstation(UPDATED_NSTATION)
+            .station(UPDATED_STATION)
             .adstation(UPDATED_ADSTATION)
             .codeinsee(UPDATED_CODEINSEE)
             .xlongitude(UPDATED_XLONGITUDE)
@@ -320,9 +320,9 @@ public class BorneResourceIT {
         assertThat(testBorne.getY()).isEqualTo(UPDATED_Y);
         assertThat(testBorne.getAmenageur()).isEqualTo(UPDATED_AMENAGEUR);
         assertThat(testBorne.getOperateur()).isEqualTo(UPDATED_OPERATEUR);
-        assertThat(testBorne.getNenseigne()).isEqualTo(UPDATED_NENSEIGNE);
+        assertThat(testBorne.getEnseigne()).isEqualTo(UPDATED_ENSEIGNE);
         assertThat(testBorne.getIdstation()).isEqualTo(UPDATED_IDSTATION);
-        assertThat(testBorne.getNstation()).isEqualTo(UPDATED_NSTATION);
+        assertThat(testBorne.getStation()).isEqualTo(UPDATED_STATION);
         assertThat(testBorne.getAdstation()).isEqualTo(UPDATED_ADSTATION);
         assertThat(testBorne.getCodeinsee()).isEqualTo(UPDATED_CODEINSEE);
         assertThat(testBorne.getXlongitude()).isEqualTo(UPDATED_XLONGITUDE);

@@ -1,4 +1,12 @@
-Dans un prompt command windows
+mongoimport --type csv -d jhipsterSampleApplication -c borne --headerline --drop data.csv
+
+
+mongoimport —-db jhipsterSampleApplication —-collection Borne —-type csv —-headerline —-ignoreBlanks —-file csvbdd/data.csv
 
 
 mongoimport --db jhipsterSampleApplication --collection Borne --type csv --headerline --ignoreBlanks --file C:\jhipster\csvbdd\data.csv
+
+
+jhipster import-jdl c:\jhipster\csvbdd\jhipster-jdl.jh
+
+

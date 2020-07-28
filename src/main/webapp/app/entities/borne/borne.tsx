@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Col, Row, Table } from 'reactstrap';
-import { Translate, ICrudGetAllAction } from 'react-jhipster';
+import { Translate, ICrudGetAllAction, TextFormat } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -36,6 +36,63 @@ export const Borne = (props: IBorneProps) => {
                 <th>
                   <Translate contentKey="global.field.id">ID</Translate>
                 </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.x">X</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.y">Y</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.amenageur">Amenageur</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.operateur">Operateur</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.enseigne">Enseigne</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.idstation">Idstation</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.station">Station</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.adstation">Adstation</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.codeinsee">Codeinsee</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.xlongitude">Xlongitude</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.ylatitude">Ylatitude</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.nbrepdc">Nbrepdc</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.idpdc">Idpdc</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.puissmax">Puissmax</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.typeprise">Typeprise</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.accesrecharge">Accesrecharge</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.accessibilite">Accessibilite</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.observations">Observations</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.datemajnoperateur">Datemajnoperateur</Translate>
+                </th>
                 <th />
               </tr>
             </thead>
@@ -46,6 +103,27 @@ export const Borne = (props: IBorneProps) => {
                     <Button tag={Link} to={`${match.url}/${borne.id}`} color="link" size="sm">
                       {borne.id}
                     </Button>
+                  </td>
+                  <td>{borne.x}</td>
+                  <td>{borne.y}</td>
+                  <td>{borne.amenageur}</td>
+                  <td>{borne.operateur}</td>
+                  <td>{borne.enseigne}</td>
+                  <td>{borne.idstation}</td>
+                  <td>{borne.station}</td>
+                  <td>{borne.adstation}</td>
+                  <td>{borne.codeinsee}</td>
+                  <td>{borne.xlongitude}</td>
+                  <td>{borne.ylatitude}</td>
+                  <td>{borne.nbrepdc}</td>
+                  <td>{borne.idpdc}</td>
+                  <td>{borne.puissmax}</td>
+                  <td>{borne.typeprise}</td>
+                  <td>{borne.accesrecharge}</td>
+                  <td>{borne.accessibilite}</td>
+                  <td>{borne.observations}</td>
+                  <td>
+                    {borne.datemajnoperateur ? <TextFormat type="date" value={borne.datemajnoperateur} format={APP_DATE_FORMAT} /> : null}
                   </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

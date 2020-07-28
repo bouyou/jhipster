@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Row, Col, Label } from 'reactstrap';
-import { AvFeedback, AvForm, AvGroup, AvInput } from 'availity-reactstrap-validation';
+import { AvFeedback, AvForm, AvGroup, AvInput, AvField } from 'availity-reactstrap-validation';
 import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
@@ -38,6 +38,8 @@ export const BorneUpdate = (props: IBorneUpdateProps) => {
   }, [props.updateSuccess]);
 
   const saveEntity = (event, errors, values) => {
+    values.datemajnoperateur = convertDateTimeToServer(values.datemajnoperateur);
+
     if (errors.length === 0) {
       const entity = {
         ...borneEntity,
@@ -75,6 +77,127 @@ export const BorneUpdate = (props: IBorneUpdateProps) => {
                   <AvInput id="borne-id" type="text" className="form-control" name="id" required readOnly />
                 </AvGroup>
               ) : null}
+              <AvGroup>
+                <Label id="xLabel" for="borne-x">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.x">X</Translate>
+                </Label>
+                <AvField id="borne-x" type="string" className="form-control" name="x" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="yLabel" for="borne-y">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.y">Y</Translate>
+                </Label>
+                <AvField id="borne-y" type="string" className="form-control" name="y" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="amenageurLabel" for="borne-amenageur">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.amenageur">Amenageur</Translate>
+                </Label>
+                <AvField id="borne-amenageur" type="text" name="amenageur" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="operateurLabel" for="borne-operateur">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.operateur">Operateur</Translate>
+                </Label>
+                <AvField id="borne-operateur" type="text" name="operateur" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="enseigneLabel" for="borne-enseigne">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.enseigne">Enseigne</Translate>
+                </Label>
+                <AvField id="borne-enseigne" type="text" name="enseigne" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="idstationLabel" for="borne-idstation">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.idstation">Idstation</Translate>
+                </Label>
+                <AvField id="borne-idstation" type="text" name="idstation" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="stationLabel" for="borne-station">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.station">Station</Translate>
+                </Label>
+                <AvField id="borne-station" type="text" name="station" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="adstationLabel" for="borne-adstation">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.adstation">Adstation</Translate>
+                </Label>
+                <AvField id="borne-adstation" type="text" name="adstation" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="codeinseeLabel" for="borne-codeinsee">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.codeinsee">Codeinsee</Translate>
+                </Label>
+                <AvField id="borne-codeinsee" type="string" className="form-control" name="codeinsee" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="xlongitudeLabel" for="borne-xlongitude">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.xlongitude">Xlongitude</Translate>
+                </Label>
+                <AvField id="borne-xlongitude" type="string" className="form-control" name="xlongitude" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="ylatitudeLabel" for="borne-ylatitude">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.ylatitude">Ylatitude</Translate>
+                </Label>
+                <AvField id="borne-ylatitude" type="string" className="form-control" name="ylatitude" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="nbrepdcLabel" for="borne-nbrepdc">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.nbrepdc">Nbrepdc</Translate>
+                </Label>
+                <AvField id="borne-nbrepdc" type="text" name="nbrepdc" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="idpdcLabel" for="borne-idpdc">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.idpdc">Idpdc</Translate>
+                </Label>
+                <AvField id="borne-idpdc" type="text" name="idpdc" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="puissmaxLabel" for="borne-puissmax">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.puissmax">Puissmax</Translate>
+                </Label>
+                <AvField id="borne-puissmax" type="text" name="puissmax" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="typepriseLabel" for="borne-typeprise">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.typeprise">Typeprise</Translate>
+                </Label>
+                <AvField id="borne-typeprise" type="text" name="typeprise" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="accesrechargeLabel" for="borne-accesrecharge">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.accesrecharge">Accesrecharge</Translate>
+                </Label>
+                <AvField id="borne-accesrecharge" type="text" name="accesrecharge" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="accessibiliteLabel" for="borne-accessibilite">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.accessibilite">Accessibilite</Translate>
+                </Label>
+                <AvField id="borne-accessibilite" type="text" name="accessibilite" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="observationsLabel" for="borne-observations">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.observations">Observations</Translate>
+                </Label>
+                <AvField id="borne-observations" type="text" name="observations" />
+              </AvGroup>
+              <AvGroup>
+                <Label id="datemajnoperateurLabel" for="borne-datemajnoperateur">
+                  <Translate contentKey="jhipsterSampleApplicationApp.borne.datemajnoperateur">Datemajnoperateur</Translate>
+                </Label>
+                <AvInput
+                  id="borne-datemajnoperateur"
+                  type="datetime-local"
+                  className="form-control"
+                  name="datemajnoperateur"
+                  placeholder={'YYYY-MM-DD HH:mm'}
+                  value={isNew ? displayDefaultDateTime() : convertDateTimeFromServer(props.borneEntity.datemajnoperateur)}
+                />
+              </AvGroup>
               <Button tag={Link} id="cancel-save" to="/borne" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
