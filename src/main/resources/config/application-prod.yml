@@ -17,7 +17,7 @@ logging:
   level:
     ROOT: INFO
     io.github.jhipster: INFO
-    testpackage: INFO
+    com.mycompany.myapp: INFO
 
 management:
   metrics:
@@ -34,8 +34,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017
-      database: Test
-      auto-index-creation: false
+      database: jhipsterSampleApplication
   mail:
     host: localhost
     port: 25
@@ -46,7 +45,7 @@ spring:
 
 # ===================================================================
 # To enable TLS in production, generate a certificate using:
-# keytool -genkey -alias test -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+# keytool -genkey -alias jhipstersampleapplication -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
 #
 # You can also use Let's Encrypt:
 # https://maximilian-boehm.com/hp2121/Create-a-Java-Keystore-JKS-from-Let-s-Encrypt-Certificates.htm
@@ -80,10 +79,6 @@ jhipster:
   http:
     cache: # Used by the CachingHttpHeadersFilter
       timeToLiveInDays: 1461
-  cache: # Cache configuration
-    ehcache: # Ehcache configuration
-      time-to-live-seconds: 3600 # By default objects stay 1 hour in the cache
-      max-entries: 1000 # Number of objects in each cache entry
   security:
     authentication:
       jwt:
@@ -92,7 +87,7 @@ jhipster:
         # - In the JHipster Registry (which includes a Spring Cloud Config server)
         # - In a separate `application-prod.yml` file, in the same folder as your executable JAR file
         # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
-        base64-secret: NmRkMTQyOGUyMjI1MGRhMWY5MmM2NDU1MTRiM2IxYzc4NTdjY2NkYzFkYmYwODA0Mjg2NjNjYmJmNTllNTYxOTljODA4YWRjOTZiNjhkMzE0NjEzYzZhZmY5YWUzYWFlNDE2YTI5ZjgwNzJjOTQ0OTQyZDcxYTE5YTNhMzRjMjU=
+        base64-secret: NzM2NWNmOWFkZjY4ZGQ0ZDMxM2VkNWRjY2MyNDc2YTIwMzdlN2RmZWI4MTFkMTA4NzFiN2QxNjQ0MWZhY2UzZjY4NmJhZTQxMDkxN2MxNDQyYmIwYzdlYmFhYWU0NGU3NTVmM2VlODFjNTJmY2JiNjQxMGI5YTI5OGIxMGMzODk=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

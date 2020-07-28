@@ -1,16 +1,16 @@
 version: '2'
 services:
-  test-mongodb:
+  jhipstersampleapplication-mongodb:
     image: mongo:4.2.7
     ports:
       - '27017:27017'
-    command: mongos --configdb csvr/test-mongodb-config --bind_ip 0.0.0.0
-  test-mongodb-node:
+    command: mongos --configdb csvr/jhipstersampleapplication-mongodb-config --bind_ip 0.0.0.0
+  jhipstersampleapplication-mongodb-node:
     build:
       context: .
       dockerfile: mongodb/MongoDB.Dockerfile
     command: mongod --shardsvr --replSet rs1
-  test-mongodb-config:
+  jhipstersampleapplication-mongodb-config:
     image: mongo:4.2.7
-    container_name: test-mongodb-config
+    container_name: jhipstersampleapplication-mongodb-config
     command: mongod --configsvr --dbpath /data/db --replSet csvr
