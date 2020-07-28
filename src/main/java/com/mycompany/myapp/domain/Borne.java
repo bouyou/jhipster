@@ -18,10 +18,10 @@ public class Borne implements Serializable {
     @Id
     private String id;
 
-    @Field("x")
+    @Field("X")
     private Double x;
 
-    @Field("y")
+    @Field("Y")
     private Double y;
 
     @Field("amenageur")
