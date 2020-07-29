@@ -47,6 +47,7 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017
       database: jhipsterSampleApplication
+      auto-index-creation: false
   mail:
     host: localhost
     port: 25
