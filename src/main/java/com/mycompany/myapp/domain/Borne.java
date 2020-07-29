@@ -373,7 +373,7 @@ public class Borne implements Serializable {
             ", accesrecharge='" + getAccesrecharge() + "'" +
             ", accessibilite='" + getAccessibilite() + "'" +
             ", observations='" + getObservations() + "'" +
-            ", datemajnoperateur='" + getDatemaj() + "'" +
+            ", datemaj='" + getDatemaj() + "'" +
             "}";
     }
 }

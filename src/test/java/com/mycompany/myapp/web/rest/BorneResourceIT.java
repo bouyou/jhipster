@@ -81,8 +81,8 @@ public class BorneResourceIT {
     private static final String DEFAULT_OBSERVATIONS = "AAAAAAAAAA";
     private static final String UPDATED_OBSERVATIONS = "BBBBBBBBBB";
 
-    private static final Instant DEFAULT_DATEMAJNOPERATEUR = Instant.ofEpochMilli(0L);
-    private static final Instant UPDATED_DATEMAJNOPERATEUR = Instant.now().truncatedTo(ChronoUnit.MILLIS);
+    private static final Instant DEFAULT_DATEMAJ = Instant.ofEpochMilli(0L);
+    private static final Instant UPDATED_DATEMAJ = Instant.now().truncatedTo(ChronoUnit.MILLIS);
 
     @Autowired
     private BorneRepository borneRepository;
@@ -118,7 +118,7 @@ public class BorneResourceIT {
             .accesrecharge(DEFAULT_ACCESRECHARGE)
             .accessibilite(DEFAULT_ACCESSIBILITE)
             .observations(DEFAULT_OBSERVATIONS)
-            .datemajnoperateur(DEFAULT_DATEMAJNOPERATEUR);
+            .datemajnoperateur(DEFAULT_DATEMAJ);
         return borne;
     }
 
@@ -148,7 +148,7 @@ public class BorneResourceIT {
             .accesrecharge(UPDATED_ACCESRECHARGE)
             .accessibilite(UPDATED_ACCESSIBILITE)
             .observations(UPDATED_OBSERVATIONS)
-            .datemajnoperateur(UPDATED_DATEMAJNOPERATEUR);
+            .datemajnoperateur(UPDATED_DATEMAJ);
         return borne;
     }
 
@@ -188,7 +188,7 @@ public class BorneResourceIT {
         assertThat(testBorne.getAccesrecharge()).isEqualTo(DEFAULT_ACCESRECHARGE);
         assertThat(testBorne.getAccessibilite()).isEqualTo(DEFAULT_ACCESSIBILITE);
         assertThat(testBorne.getObservations()).isEqualTo(DEFAULT_OBSERVATIONS);
-        assertThat(testBorne.getDatemajnoperateur()).isEqualTo(DEFAULT_DATEMAJNOPERATEUR);
+        assertThat(testBorne.getDatemaj()).isEqualTo(DEFAULT_DATEMAJ);
     }
 
     @Test
@@ -237,7 +237,7 @@ public class BorneResourceIT {
             .andExpect(jsonPath("$.[*].accesrecharge").value(hasItem(DEFAULT_ACCESRECHARGE)))
             .andExpect(jsonPath("$.[*].accessibilite").value(hasItem(DEFAULT_ACCESSIBILITE)))
             .andExpect(jsonPath("$.[*].observations").value(hasItem(DEFAULT_OBSERVATIONS)))
-            .andExpect(jsonPath("$.[*].datemajnoperateur").value(hasItem(DEFAULT_DATEMAJNOPERATEUR.toString())));
+            .andExpect(jsonPath("$.[*].datemaj").value(hasItem(DEFAULT_DATEMAJ.toString())));
     }
 
     @Test
@@ -269,7 +269,7 @@ public class BorneResourceIT {
             .andExpect(jsonPath("$.accesrecharge").value(DEFAULT_ACCESRECHARGE))
             .andExpect(jsonPath("$.accessibilite").value(DEFAULT_ACCESSIBILITE))
             .andExpect(jsonPath("$.observations").value(DEFAULT_OBSERVATIONS))
-            .andExpect(jsonPath("$.datemajnoperateur").value(DEFAULT_DATEMAJNOPERATEUR.toString()));
+            .andExpect(jsonPath("$.datemajnoperateur").value(DEFAULT_DATEMAJ.toString()));
     }
 
     @Test
@@ -306,7 +306,7 @@ public class BorneResourceIT {
             .accesrecharge(UPDATED_ACCESRECHARGE)
             .accessibilite(UPDATED_ACCESSIBILITE)
             .observations(UPDATED_OBSERVATIONS)
-            .datemajnoperateur(UPDATED_DATEMAJNOPERATEUR);
+            .datemajnoperateur(UPDATED_DATEMAJ);
 
         restBorneMockMvc
             .perform(put("/api/bornes").contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(updatedBorne)))
@@ -334,7 +334,7 @@ public class BorneResourceIT {
         assertThat(testBorne.getAccesrecharge()).isEqualTo(UPDATED_ACCESRECHARGE);
         assertThat(testBorne.getAccessibilite()).isEqualTo(UPDATED_ACCESSIBILITE);
         assertThat(testBorne.getObservations()).isEqualTo(UPDATED_OBSERVATIONS);
-        assertThat(testBorne.getDatemajnoperateur()).isEqualTo(UPDATED_DATEMAJNOPERATEUR);
+        assertThat(testBorne.getDatemaj()).isEqualTo(UPDATED_DATEMAJ);
     }
 
     @Test
