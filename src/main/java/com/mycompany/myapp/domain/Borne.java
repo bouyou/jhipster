@@ -72,15 +72,15 @@ public class Borne implements Serializable {
     @Field("observations")
     private String observations;
 
-    @Field("datemajnoperateur")
-    private Instant datemajnoperateur;
+    @Field("date_maj")
+    private Instant datemaj;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(final String id) {
         this.id = id;
     }
 
@@ -88,12 +88,12 @@ public class Borne implements Serializable {
         return x;
     }
 
-    public Borne x(Double x) {
+    public Borne x(final Double x) {
         this.x = x;
         return this;
     }
 
-    public void setX(Double x) {
+    public void setX(final Double x) {
         this.x = x;
     }
 
@@ -101,12 +101,12 @@ public class Borne implements Serializable {
         return y;
     }
 
-    public Borne y(Double y) {
+    public Borne y(final Double y) {
         this.y = y;
         return this;
     }
 
-    public void setY(Double y) {
+    public void setY(final Double y) {
         this.y = y;
     }
 
@@ -114,12 +114,12 @@ public class Borne implements Serializable {
         return amenageur;
     }
 
-    public Borne amenageur(String amenageur) {
+    public Borne amenageur(final String amenageur) {
         this.amenageur = amenageur;
         return this;
     }
 
-    public void setAmenageur(String amenageur) {
+    public void setAmenageur(final String amenageur) {
         this.amenageur = amenageur;
     }
 
@@ -127,12 +127,12 @@ public class Borne implements Serializable {
         return operateur;
     }
 
-    public Borne operateur(String operateur) {
+    public Borne operateur(final String operateur) {
         this.operateur = operateur;
         return this;
     }
 
-    public void setOperateur(String operateur) {
+    public void setOperateur(final String operateur) {
         this.operateur = operateur;
     }
 
@@ -140,12 +140,12 @@ public class Borne implements Serializable {
         return enseigne;
     }
 
-    public Borne enseigne(String enseigne) {
+    public Borne enseigne(final String enseigne) {
         this.enseigne = enseigne;
         return this;
     }
 
-    public void setEnseigne(String enseigne) {
+    public void setEnseigne(final String enseigne) {
         this.enseigne = enseigne;
     }
 
@@ -153,12 +153,12 @@ public class Borne implements Serializable {
         return idstation;
     }
 
-    public Borne idstation(String idstation) {
+    public Borne idstation(final String idstation) {
         this.idstation = idstation;
         return this;
     }
 
-    public void setIdstation(String idstation) {
+    public void setIdstation(final String idstation) {
         this.idstation = idstation;
     }
 
@@ -166,12 +166,12 @@ public class Borne implements Serializable {
         return station;
     }
 
-    public Borne station(String station) {
+    public Borne station(final String station) {
         this.station = station;
         return this;
     }
 
-    public void setStation(String station) {
+    public void setStation(final String station) {
         this.station = station;
     }
 
@@ -179,12 +179,12 @@ public class Borne implements Serializable {
         return adstation;
     }
 
-    public Borne adstation(String adstation) {
+    public Borne adstation(final String adstation) {
         this.adstation = adstation;
         return this;
     }
 
-    public void setAdstation(String adstation) {
+    public void setAdstation(final String adstation) {
         this.adstation = adstation;
     }
 
@@ -192,12 +192,12 @@ public class Borne implements Serializable {
         return codeinsee;
     }
 
-    public Borne codeinsee(Integer codeinsee) {
+    public Borne codeinsee(final Integer codeinsee) {
         this.codeinsee = codeinsee;
         return this;
     }
 
-    public void setCodeinsee(Integer codeinsee) {
+    public void setCodeinsee(final Integer codeinsee) {
         this.codeinsee = codeinsee;
     }
 
@@ -205,12 +205,12 @@ public class Borne implements Serializable {
         return xlongitude;
     }
 
-    public Borne xlongitude(Double xlongitude) {
+    public Borne xlongitude(final Double xlongitude) {
         this.xlongitude = xlongitude;
         return this;
     }
 
-    public void setXlongitude(Double xlongitude) {
+    public void setXlongitude(final Double xlongitude) {
         this.xlongitude = xlongitude;
     }
 
@@ -218,12 +218,12 @@ public class Borne implements Serializable {
         return ylatitude;
     }
 
-    public Borne ylatitude(Double ylatitude) {
+    public Borne ylatitude(final Double ylatitude) {
         this.ylatitude = ylatitude;
         return this;
     }
 
-    public void setYlatitude(Double ylatitude) {
+    public void setYlatitude(final Double ylatitude) {
         this.ylatitude = ylatitude;
     }
 
@@ -231,12 +231,12 @@ public class Borne implements Serializable {
         return nbrepdc;
     }
 
-    public Borne nbrepdc(String nbrepdc) {
+    public Borne nbrepdc(final String nbrepdc) {
         this.nbrepdc = nbrepdc;
         return this;
     }
 
-    public void setNbrepdc(String nbrepdc) {
+    public void setNbrepdc(final String nbrepdc) {
         this.nbrepdc = nbrepdc;
     }
 
@@ -244,12 +244,12 @@ public class Borne implements Serializable {
         return idpdc;
     }
 
-    public Borne idpdc(String idpdc) {
+    public Borne idpdc(final String idpdc) {
         this.idpdc = idpdc;
         return this;
     }
 
-    public void setIdpdc(String idpdc) {
+    public void setIdpdc(final String idpdc) {
         this.idpdc = idpdc;
     }
 
@@ -257,12 +257,12 @@ public class Borne implements Serializable {
         return puissmax;
     }
 
-    public Borne puissmax(String puissmax) {
+    public Borne puissmax(final String puissmax) {
         this.puissmax = puissmax;
         return this;
     }
 
-    public void setPuissmax(String puissmax) {
+    public void setPuissmax(final String puissmax) {
         this.puissmax = puissmax;
     }
 
@@ -270,12 +270,12 @@ public class Borne implements Serializable {
         return typeprise;
     }
 
-    public Borne typeprise(String typeprise) {
+    public Borne typeprise(final String typeprise) {
         this.typeprise = typeprise;
         return this;
     }
 
-    public void setTypeprise(String typeprise) {
+    public void setTypeprise(final String typeprise) {
         this.typeprise = typeprise;
     }
 
@@ -283,12 +283,12 @@ public class Borne implements Serializable {
         return accesrecharge;
     }
 
-    public Borne accesrecharge(String accesrecharge) {
+    public Borne accesrecharge(final String accesrecharge) {
         this.accesrecharge = accesrecharge;
         return this;
     }
 
-    public void setAccesrecharge(String accesrecharge) {
+    public void setAccesrecharge(final String accesrecharge) {
         this.accesrecharge = accesrecharge;
     }
 
@@ -296,12 +296,12 @@ public class Borne implements Serializable {
         return accessibilite;
     }
 
-    public Borne accessibilite(String accessibilite) {
+    public Borne accessibilite(final String accessibilite) {
         this.accessibilite = accessibilite;
         return this;
     }
 
-    public void setAccessibilite(String accessibilite) {
+    public void setAccessibilite(final String accessibilite) {
         this.accessibilite = accessibilite;
     }
 
@@ -309,32 +309,33 @@ public class Borne implements Serializable {
         return observations;
     }
 
-    public Borne observations(String observations) {
+    public Borne observations(final String observations) {
         this.observations = observations;
         return this;
     }
 
-    public void setObservations(String observations) {
+    public void setObservations(final String observations) {
         this.observations = observations;
     }
 
-    public Instant getDatemajnoperateur() {
-        return datemajnoperateur;
+    public Instant getDatemaj() {
+        return datemaj;
     }
 
-    public Borne datemajnoperateur(Instant datemajnoperateur) {
-        this.datemajnoperateur = datemajnoperateur;
+    public Borne datemajnoperateur(final Instant datemaj) {
+        this.datemaj = datemaj;
         return this;
     }
 
-    public void setDatemajnoperateur(Instant datemajnoperateur) {
-        this.datemajnoperateur = datemajnoperateur;
+    public void setDatemajnoperateur(final Instant datemaj) {
+        this.datemaj = datemaj;
     }
 
-    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and
+    // setters here
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         if (this == o) {
             return true;
         }
@@ -372,7 +373,7 @@ public class Borne implements Serializable {
             ", accesrecharge='" + getAccesrecharge() + "'" +
             ", accessibilite='" + getAccessibilite() + "'" +
             ", observations='" + getObservations() + "'" +
-            ", datemajnoperateur='" + getDatemajnoperateur() + "'" +
+            ", datemajnoperateur='" + getDatemaj() + "'" +
             "}";
     }
 }
