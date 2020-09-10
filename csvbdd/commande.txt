@@ -4,7 +4,7 @@ mongoimport --type csv -d jhipsterSampleApplication -c borne --headerline --drop
 mongoimport —-db jhipsterSampleApplication —-collection Borne —-type csv —-headerline —-ignoreBlanks —-file csvbdd/data.csv
 
 
-mongoimport --db jhipsterSampleApplication --collection Borne --type csv --headerline --ignoreBlanks --file C:\jhipster\csvbdd\data.csv
+mongoimport --db jhipsterSampleApplication --collection Borne --type csv --headerline --ignoreBlanks --file C:\Users\billy\IdeaProjects\jhipster\csvbdd\data.csv
 
 
 jhipster import-jdl c:\jhipster\csvbdd\jhipster-jdl.jh
