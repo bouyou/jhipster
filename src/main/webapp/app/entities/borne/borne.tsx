@@ -34,7 +34,7 @@ export const Borne = (props: IBorneProps) => {
             <thead>
               <tr>
                 <th>
-                  <Translate contentKey="global.field.id">ID</Translate>
+                  <Translate contentKey="global.field.id">ID Toto</Translate>
                 </th>
                 <th>
                   <Translate contentKey="jhipsterSampleApplicationApp.borne.x">X</Translate>
@@ -50,9 +50,6 @@ export const Borne = (props: IBorneProps) => {
                 </th>
                 <th>
                   <Translate contentKey="jhipsterSampleApplicationApp.borne.enseigne">Enseigne</Translate>
-                </th>
-                <th>
-                  <Translate contentKey="jhipsterSampleApplicationApp.borne.idstation">Idstation</Translate>
                 </th>
                 <th>
                   <Translate contentKey="jhipsterSampleApplicationApp.borne.station">Station</Translate>
@@ -109,7 +106,6 @@ export const Borne = (props: IBorneProps) => {
                   <td>{borne.amenageur}</td>
                   <td>{borne.operateur}</td>
                   <td>{borne.enseigne}</td>
-                  <td>{borne.idstation}</td>
                   <td>{borne.station}</td>
                   <td>{borne.adstation}</td>
                   <td>{borne.codeinsee}</td>
