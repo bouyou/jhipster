@@ -141,5 +141,15 @@
   "jestSonar": {
     "reportPath": "target/test-results/jest",
     "reportFile": "TESTS-results-sonar.xml"
-  }
+  },
+  "main": ".lintstagedrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bouyou/jhipster.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/bouyou/jhipster/issues"
+  },
+  "homepage": "https://github.com/bouyou/jhipster#readme"
 }
