@@ -10,3 +10,7 @@ mongoimport --db jhipsterSampleApplication --collection Borne --type csv --heade
 jhipster import-jdl c:\jhipster\csvbdd\jhipster-jdl.jh
 
 
+//pour creation d'un controler
+    1/npm install -g generator-jhipster
+    2/jhipster spring-controller Map
+
