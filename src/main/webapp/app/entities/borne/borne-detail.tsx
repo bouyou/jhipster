@@ -22,7 +22,7 @@ export const BorneDetail = (props: IBorneDetailProps) => {
     <Row>
       <Col md="8">
         <h2>
-          <Translate contentKey="jhipsterSampleApplicationApp.borne.detail.title">Borne</Translate> [<b>{borneEntity.id}</b>]
+          <Translate contentKey="jhipsterSampleApplicationApp.borne.detail.title">Borne</Translate> [<b>{borneEntity.id} Toto</b>]
         </h2>
         <dl className="jh-entity-details">
           <dt>
